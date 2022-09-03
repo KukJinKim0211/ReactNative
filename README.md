@@ -9,3 +9,11 @@
 사용 도구
 
 - watchman : 작업 처리 모니터링
+
+코코아팟 설치 오류
+sudo xcodebuild -license accept
+sudo xcodebuild -license
+
+import type {Node} from 'react' 에러 뜰 시.
+
+1. flow language support extention 설치
