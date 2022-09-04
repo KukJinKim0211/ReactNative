@@ -12,6 +12,74 @@
 
 ---
 
+### 라이브러리
+
+#### react-native-safe-area-context => 앱의 statusbar 영역에 내용을 넣으려고 할 때 사용하는 라이브러리
+
+1. yarn add react-native-safe-area-context
+2. cd ios
+3. pod install
+4. cd ..
+5. yarn ios
+6. App.js에 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
+
+#### react-native-vector-icons => 벡터 아이콘
+
+https://oblador.github.io/react-native-vector-icons/ 여러 아이콘들
+
+#### @react-native-community/async-storage => AsyncStorage
+
+##### 가져오기
+
+```javascript
+import AsyncStorage from "@react-native-community/async-storage";
+```
+
+##### 저장하기
+
+```javascript
+const save = async () => {
+  try {
+    // 값 저장 시
+    await AsyncStorage.setItem("key", "value");
+    // 객체, 배열 저장 시
+    await AsyncStorage.setItem("todos", JSON.stringify(todos));
+  } catch (e) {
+    // 오류 처리
+  }
+};
+```
+
+##### 불러오기
+
+```javascript
+const load = async () => {
+  try {
+    // 값 불러오기
+    const value = await AsyncStorage.getItem('key');
+    // 객체, 배열 불러오기
+    const rawTodos = await AsyncStorage.getItem('todos');
+    const todos.= JSON.parse(rawTodos);
+  } catch (e) {
+    // 오류 처리
+  }
+}
+```
+
+##### 초기화
+
+```javascript
+const clearAll = async () => {
+  try {
+    await AsyncStorage.clear();
+  } catch (e) {
+    // 오류 처리
+  }
+};
+```
+
+---
+
 ### 코코아팟 설치 오류
 
 sudo xcodebuild -license accept
@@ -21,16 +89,7 @@ sudo xcodebuild -license
 
 ### 색상 코드 정할 시.
 
-## https://material.io/resources/color
-
-### react-native-safe-area-context => 앱의 statusbar 영역에 내용을 넣으려고 할 때 사용하는 라이브러리
-
-1. yarn add react-native-safe-area-context
-2. cd ios
-3. pod install
-4. cd ..
-5. yarn ios
-6. App.js에 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
+https://material.io/resources/color
 
 ---
 
