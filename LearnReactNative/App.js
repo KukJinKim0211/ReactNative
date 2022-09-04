@@ -29,7 +29,7 @@ import Counter from './components/Counter';
 
 const App = () => {
   const [visible, setVisible] = useState(true);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(10);
   const onPress = () => {
     setVisible(!visible);
   };
