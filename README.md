@@ -23,6 +23,21 @@
 5. yarn ios
 6. App.js에 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 
+#### 리액트 네비게이션
+
+1. yarn add @react-navigation/native
+2. yarn add react-native-screens react-native-safe-area-context => 의존성 라이브러리 설치
+
+##### 네이티브 스택 내비게이터
+
+1. yarn add @react-natigation/native-stack
+
+##### 드로어 내비게이터 => 좌측 혹은 우측 사이드바 생성
+
+1. yarn add @react-navigation/drawer react-native-gesture-handler react-native-reanimated
+2. cd ios
+3. pod install
+
 #### react-native-vector-icons => 벡터 아이콘
 
 https://oblador.github.io/react-native-vector-icons/ 여러 아이콘들
